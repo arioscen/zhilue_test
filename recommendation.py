@@ -56,7 +56,7 @@ for index, row in test_data.iterrows():
 # 計算 AUC 值
 print(roc_auc_score(y_true, y_scores))  # 0.65984369663
 
-# 推薦前 100 個使用者尚未購買過的商品
+# 推薦 100 個使用者尚未購買過的商品
 results = {}
 for idx, row in item_prediction_df.iterrows():
     predict_result = item_prediction_df.loc[idx][train_df.loc[idx] != 1]
